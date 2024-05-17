@@ -1,5 +1,5 @@
 {% set name = "pymcma" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/marek-iiasa/pymcma/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 61981a0f5a5595c3a384d77f0f57d3f3b53b6210df44611934b0f7b8b1bf9a79
+  sha256: e73ff4524cf19f81da59294ccced9e22544f86869712373df3e0bebeefbf2860
 
 build:
   entry_points:
@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.11
+    - python >=3.11,<3.12
     - setuptools >=61.0
     - pip
   run:
-    - python >=3.11
+    - python >=3.11,<3.12
     - pyomo
     - glpk
     - seaborn
