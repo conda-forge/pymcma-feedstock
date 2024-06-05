@@ -1,5 +1,5 @@
 {% set name = "pymcma" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,8 +7,7 @@ package:
 
 source:
   url: https://github.com/marek-iiasa/pymcma/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: e73ff4524cf19f81da59294ccced9e22544f86869712373df3e0bebeefbf2860
-
+  sha256: df79f8f4f003558dd50db400942ae26f963a12ca751748c7edfa2febbafcfde9
 build:
   entry_points:
     - pymcma = pymcma:mcma.main
