@@ -13,7 +13,7 @@ build:
     - pymcma = pymcma:mcma.main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -22,12 +22,12 @@ requirements:
     - pip
   run:
     - python >=3.11,<3.12
-    - pyomo
+    - pyomo ==6.7.1
     - glpk
     - seaborn
     - dill
     - matplotlib-base
-    - numpy
+    - numpy ==1.26.4,<2.0.0
     - pandas
     - scipy
     - pyyaml
