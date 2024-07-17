@@ -1,5 +1,5 @@
 {% set name = "pymcma" %}
-{% set version = "1.1.1" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://github.com/marek-iiasa/pymcma/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: df79f8f4f003558dd50db400942ae26f963a12ca751748c7edfa2febbafcfde9
+  sha256: 56201b27933a17f8d35a6e9e295eb1426525359049ff35fa2493a57c99fb798c
 build:
   entry_points:
     - pymcma = pymcma:mcma.main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -27,10 +27,11 @@ requirements:
     - seaborn
     - dill
     - matplotlib-base
-    - numpy ==1.26.4,<2.0.0
+    - numpy >=1.26.4,<2.0.0
     - pandas
     - scipy
     - pyyaml
+    - scikit-learn
 
 test:
   imports:
