@@ -144,4 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@kotbaton](https://github.com/kotbaton/)
+* [@marek-iiasa](https://github.com/marek-iiasa/)
 
